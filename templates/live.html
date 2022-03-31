@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block app_content %}
+<div class="counter">{{ game.life_counter }}</div>
+<a href="index.html" class="btn btn-warning home">Go home</a>
+<a href="live.html" class="btn btn-info refresh">Refresh</a>
+
+<table class="world">
+    {% for i in game.world %}
+        <tr>
+        {% for j in i %}
+           {% if j %}
+                <td class="cell living-cell"></td>
+           {% else %}
+                <td class="cell"></td>
+            {% endif %}
+        {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+
+{% endblock %}
+
+
+
+
+
+</body>
+</html>
