@@ -12,10 +12,10 @@
 <a href="live.html" class="btn btn-info refresh">Refresh</a>
 
 <table class="world">
-    {% for i in game.world %}
+    {% for i in range(game.world|length) %}
         <tr>
-        {% for j in i %}
-           {% if j %}
+        {% for j in range(game.world[i]|length) %}
+           {% if game.world[i][j] %}
                 <td class="cell living-cell"></td>
            {% else %}
                 <td class="cell"></td>
