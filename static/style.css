@@ -30,7 +30,7 @@ td {
 
 a, table {
     position: absolute;
-    top: 50%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -46,6 +46,7 @@ a, table {
 }
 
 .counter {
+    text-align: center;
     margin: 20px 3px 3px;
     padding: 5px;
     font-family: "Book Antiqua", "Arial";
