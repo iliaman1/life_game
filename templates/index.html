@@ -8,6 +8,21 @@
 {% extends 'base.html' %}
 
 {% block app_content %}
+<p class="zagl" align="center">Введите размер игрового поля</p>
+<form action="" method="post">
+    <p align="center">
+        <label for="dl">Длинна</label>
+        <input type="text" name="dl">
+        <label for="sh">Ширина</label>
+        <input type="text" name="sh">
+    </p>
+
+
+    <p align="center">
+        <input class="btn btn-primary" type="submit">
+    </p>
+</form>
+<p class="zagl" align="center">{{ server_message }}</p>
 <a class="btn btn-primary" href="{{ url_for('live') }}">Создать жизнь</a>
 {% endblock %}
 </body>
